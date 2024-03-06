@@ -33,6 +33,13 @@ body {
 
 // Utils Display
 
+.container {
+  max-width: 1200px;
+  display: block;
+  margin: auto;
+  padding: 20px;
+}
+
 .d-flex {
   display: flex;
 }
@@ -57,6 +64,9 @@ body {
 .flex-fill {
   flex: 1 1 auto;
 }
+.flex-50 {
+  flex: 1 1 50%;
+}
 
 //Utils Padding
 .p-10 {
@@ -65,11 +75,60 @@ body {
 .p-20 {
   padding: 20px;
 }
+.pr-10 {
+  padding-right: 10px;
+}
+.pl-10 {
+  padding-left: 10px;
+}
 .m-10 {
   margin: 10px;
 }
 .m-20 {
   margin: 20px;
+}
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+//theme
+
+.list-primary {
+  li {
+    padding: 10px 15px;
+    border: 1px solid var(--lightgray);
+    border-top: 0;
+    &:hover {
+      background-color: var(--primary);
+      color: white;
+    }
+    transition: all 0.4s;
+    cursor: pointer;
+  }
+  li:first-child {
+    border-top: 1px solid var(--lightgray);
+    border-radius: 3px 3px 0 0;
+  }
+  li:last-child {
+    border-radius: 0 0 3px 3px;
+  }
+}
+
+.btn {
+  padding: 10px 15px;
+  background-color: white;
+  border: 0;
+  border-radius: 3px;
+  font-weight: 700;
+  cursor: pointer;
+  &-primary {
+    background-color: var(--primary);
+    color: white;
+    &:hover {
+      background-color: var(--secondary);
+    }
+    transition: background-color 0.4s;
+  }
 }
 
 //debug Colors
